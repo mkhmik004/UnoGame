@@ -44,11 +44,14 @@ def distribute_cards():
     return player_cards
 
 
-#lay the first card, take into account special cards
+#lay the first card, NOT SPECIAL/WILD cards
 def first_card():
     first_card=(random.choice(draw_pile))
-    if first_card[0]=="Wild":
-        first_card[0]=random.choice(["Red","Blue",'Green',"Yellow"]) 
+    for i in draw_pile:
+        if first_card[0] in ["Red",'Yellow','Green','Blue'] and 0<=(first_card[1])<=9:
+            break
+        else:
+            first_card=(random.choice(draw_pile))
     discard_pile.append(first_card)  
     return first_card
 
