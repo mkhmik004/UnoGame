@@ -1,5 +1,5 @@
 # UnoGame
-Console based Uno game for developers WTC
+Console based Uno game for developers
 
 ## Name
 console Uno game
